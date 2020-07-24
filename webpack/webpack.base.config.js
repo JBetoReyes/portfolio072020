@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const publicPath = resolve(__dirname, '..', 'src', 'public');
 
 module.exports = (env) => {
   const rootPath = resolve(__dirname, '..');
@@ -12,6 +13,9 @@ module.exports = (env) => {
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      alias: {
+        Styles: resolve(publicPath, 'styles'),
+      },
     },
     plugins: [
       new HtmlPlugin({
