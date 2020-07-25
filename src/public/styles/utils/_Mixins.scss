@@ -1,0 +1,9 @@
+@mixin font-size($sizeValue: 16) {
+    font-size: $sizeValue * 1px;
+    font-size: $sizeValue / 16 + rem;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
