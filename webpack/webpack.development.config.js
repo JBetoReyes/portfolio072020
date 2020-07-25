@@ -5,6 +5,14 @@ const baseConfig = require('./webpack.base.config');
 module.exports = (env) => ({
   ...merge(baseConfig(env), {
     mode: 'development',
+    module: {
+      rules: [
+        {
+          test: /\.s?css$/,
+          loader: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
+    },
     devServer: {
       contentBase: resolve(__dirname, '..', 'dist'),
       host: '0.0.0.0',

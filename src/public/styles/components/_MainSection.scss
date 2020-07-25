@@ -1,0 +1,11 @@
+$section-odd-color: #eaeaea;
+$section-even-color: #ffffff;
+
+.main-section {
+    &:nth-child(odd) {
+        background-color: $section-odd-color;
+    }
+    &:nth-child(even) {
+        background-color: $section-even-color;
+    }
+}
