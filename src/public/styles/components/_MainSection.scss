@@ -2,10 +2,22 @@ $section-odd-color: #eaeaea;
 $section-even-color: #ffffff;
 
 .main-section {
+    overflow: auto;
     &:nth-child(odd) {
         background-color: $section-odd-color;
     }
     &:nth-child(even) {
         background-color: $section-even-color;
+    }
+
+    &__container {
+        width: 1200px;
+        margin: 0 auto
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__container {
+            width: 95%;
+        }
     }
 }
