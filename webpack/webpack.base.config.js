@@ -1,12 +1,13 @@
 const { resolve } = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
-const publicPath = resolve(__dirname, '..', 'src', 'public');
+const srcPath = resolve(__dirname, '..', 'src');
+const publicPath = resolve(srcPath, 'public');
 
 module.exports = (env) => {
   const rootPath = resolve(__dirname, '..');
   return {
-    entry: resolve(rootPath, 'src', 'app',  'index.tsx'),
+    entry: resolve(rootPath, 'src', 'app', 'index.tsx'),
     output: {
       filename: 'app-[hash:6].js',
       path: resolve(rootPath, 'dist'),
@@ -14,7 +15,9 @@ module.exports = (env) => {
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],
       alias: {
-        Styles: resolve(publicPath, 'styles'),
+        '@styles': resolve(publicPath, 'styles'),
+        '@src': srcPath,
+        '@common': resolve(srcPath, 'app', 'common'),
       },
     },
     plugins: [
