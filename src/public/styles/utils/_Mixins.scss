@@ -4,8 +4,8 @@
 }
 
 @mixin size($width, $height: $width) {
-  width: $width;
-  height: $height;
+  width: $width * 1px;
+  height: $height * 1px;
 }
 
 @mixin box-shadow {
