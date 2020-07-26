@@ -1,6 +1,7 @@
 import React from 'react';
+import { MainSection } from '@common/MainSection.component';
+import { WindowHeader } from '@common/WindowHeader.component';
 import '@styles/pages/Home/sections/_IntroSection.scss';
-import { MainSection } from '@src/app/common/MainSection.component';
 
 export const IntroSection = (): JSX.Element => {
   return (
@@ -10,7 +11,13 @@ export const IntroSection = (): JSX.Element => {
           <h1 className="greet-wrapper__greet">Hello, I&apos;m Jose Quevedo</h1>
         </div>
         <div className="content-wrapper">
-          <div className="nav-wrapper">a list</div>
+          <WindowHeader
+            menus={[
+              {
+                label: 'Contact',
+              },
+            ]}
+          />
           <div className="right-wrapper">picture</div>
           <div className="left-wrapper">description</div>
         </div>

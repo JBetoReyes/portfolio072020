@@ -1,0 +1,41 @@
+@import '~@styles/utils/Index';
+
+.window {
+
+  &-header {
+    background-color: $section-odd-color;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid $primary-border-color;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-buttons {
+    display: flex;
+    padding: 10px;
+    &__button {
+      @include size(15);
+      margin: 5px;
+      border-radius: 50%;
+      &:nth-child(1) {
+        background-color: #FC6058;
+      }
+      &:nth-child(2) {
+        background-color: #FEC02F;
+      }
+      &:nth-child(3) {
+        background-color: #2ACA3E;
+      }
+    }
+  }
+
+  &-menus {
+    margin: 0;
+    padding: 0 10px 0 10px;
+
+    & li {
+      display: inline-block;
+      margin: 0 5px 0 5px;
+    }
+  }
+}
