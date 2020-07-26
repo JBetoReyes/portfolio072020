@@ -40,6 +40,7 @@
         ],
         "prettier/prettier": "error", 
         "@typescript-eslint/interface-name-prefix": "off",
+        "react/jsx-one-expression-per-line": "off",
         "react/jsx-filename-extension": [
             1,
             { "extensions": [".js", ".jsx", "ts", ".tsx"]}
