@@ -31,9 +31,7 @@ $about-background: #f0ead6;
         margin: 0 auto;
         padding: 50px 0 50px 0;
         &__profile-wrapper {
-          // border-radius: 50%;
           overflow: hidden;
-          // border: 2px solid $primary-border-color;
           @include size(200);
           &--img {
             height: 100%;
