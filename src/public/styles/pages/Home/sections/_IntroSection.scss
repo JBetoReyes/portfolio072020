@@ -1,0 +1,32 @@
+@import '~@styles/utils/Mixins';
+
+.intro-section {
+  &__container {
+    .greet-wrapper {
+      display: grid;
+      height: 200px;
+      @include flex-center;
+    }
+
+    .content-wrapper {
+      @include box-shadow;
+      background-color: #ffffff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 20px 500px;
+      grid-template-areas:
+        'nav    nav'
+        'right left';
+
+      .nav-wrapper {
+        grid-area: nav;
+      }
+      .right-wrapper {
+        grid-area: right;
+      }
+      .left-wrapper {
+        grid-area: left;
+      }
+    }
+  }
+}
