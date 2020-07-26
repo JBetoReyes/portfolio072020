@@ -18,6 +18,7 @@ module.exports = (env) => {
         '@styles': resolve(publicPath, 'styles'),
         '@src': srcPath,
         '@common': resolve(srcPath, 'app', 'common'),
+        '@assets': resolve(publicPath, 'assets'),
       },
     },
     plugins: [
@@ -36,6 +37,12 @@ module.exports = (env) => {
           test: /.tsx?$/,
           use: {
             loader: 'awesome-typescript-loader',
+          },
+        },
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: {
+            loader: 'file-loader',
           },
         },
       ],
