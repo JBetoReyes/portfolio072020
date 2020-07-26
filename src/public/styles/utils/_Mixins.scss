@@ -1,9 +1,22 @@
 @mixin font-size($sizeValue: 16) {
-    font-size: $sizeValue * 1px;
-    font-size: $sizeValue / 16 + rem;
+  font-size: $sizeValue * 1px;
+  font-size: $sizeValue / 16 + rem;
 }
 
 @mixin size($width, $height: $width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: -9px 12px 29px -8px rgba(0, 0, 0, 0.86);
+  -moz-box-shadow: -9px 12px 29px -8px rgba(0, 0, 0, 0.86);
+  box-shadow: -9px 12px 29px -8px rgba(0, 0, 0, 0.86);
+}
+
+// Flex Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
