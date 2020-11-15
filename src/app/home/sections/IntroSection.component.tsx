@@ -1,8 +1,8 @@
 import React from 'react';
 import { MainSection } from '@common/MainSection.component';
 import { WindowHeader } from '@common/WindowHeader.component';
-import '@styles/pages/Home/sections/_IntroSection.scss';
 import profile from '@assets/profile.png';
+import '@styles/pages/Home/sections/_IntroSection.scss';
 
 export const IntroSection = (): JSX.Element => {
   return (
