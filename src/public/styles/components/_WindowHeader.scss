@@ -1,13 +1,16 @@
 @import '~@styles/utils/Index';
+@import '~@styles/themes/Index';
 
 .window {
 
   &-header {
-    background-color: $section-odd-color;
     border-radius: 5px 5px 0 0;
-    border: 1px solid $primary-border-color;
+    border: 1px solid;
     display: flex;
     justify-content: space-between;
+    @include themify($themes) {
+      border-color: themed('primary-border-color');
+    }
   }
 
   &-buttons {

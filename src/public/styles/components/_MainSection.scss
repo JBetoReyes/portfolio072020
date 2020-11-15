@@ -1,12 +1,19 @@
 @import '~@styles/utils/Index';
+@import '~@styles/themes/Index';
 
 .main-section {
     overflow: auto;
     &:nth-child(odd) {
-        background-color: $section-odd-color;
+        @include themify($themes) {
+          background-color: themed('section-odd-color');
+          border-color: themed('primary-border-color'),
+        }
     }
     &:nth-child(even) {
-        background-color: $section-even-color;
+        @include themify($themes) {
+          background-color: themed('section-even-color');
+          border-color: themed('primary-border-color'),
+        }
     }
 
     &__container {
