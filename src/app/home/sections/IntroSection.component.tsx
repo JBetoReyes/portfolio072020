@@ -1,10 +1,34 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { MainSection } from '@common/MainSection.component';
 import { WindowHeader } from '@common/WindowHeader.component';
 import profile from '@assets/profile.png';
+import { IStoreState } from '@src/app/store/store.model';
+import { changeTheme } from '@common/actions/theme.action';
 import '@styles/pages/Home/sections/_IntroSection.scss';
+import { connect } from 'react-redux';
+import { AppClickEvent } from '@src/typings/htmlEvents';
 
-export const IntroSection = (): JSX.Element => {
+const mapDispatchToState = {
+  changeTheme,
+};
+
+type MapDispToState = typeof mapDispatchToState;
+
+type OwnProps = Record<string, any>;
+
+type Props = MapDispToState;
+
+const IntroSection = (props: OwnProps): JSX.Element => {
+  const { changeTheme: dispChangeTheme } = props as Props;
+  const handleChangeTheme = (theme: string) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    return (e: AppClickEvent) => {
+      dispChangeTheme(theme);
+    };
+  };
   return (
     <MainSection>
       <div className="intro-section__container">
@@ -30,8 +54,16 @@ export const IntroSection = (): JSX.Element => {
             <div className="right-wrapper__theme-wrapper">
               <h4 className="right-wrapper__theme-title">Personalize theme</h4>
               <div className="right-wrapper__theme-dots">
-                <div className="right-wrapper__theme-dot" />
-                <div className="right-wrapper__theme-dot" />
+                <div
+                  className="right-wrapper__theme-dot"
+                  onClick={handleChangeTheme('default')}
+                  role="menuitem"
+                />
+                <div
+                  className="right-wrapper__theme-dot"
+                  onClick={handleChangeTheme('dark')}
+                  role="menuitem"
+                />
               </div>
             </div>
           </div>
@@ -56,3 +88,8 @@ export const IntroSection = (): JSX.Element => {
     </MainSection>
   );
 };
+
+export default connect<null, MapDispToState, OwnProps, IStoreState>(
+  null,
+  mapDispatchToState
+)(IntroSection);
