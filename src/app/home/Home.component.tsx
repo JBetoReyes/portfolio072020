@@ -4,6 +4,7 @@ import { MainSection } from '@common/MainSection.component';
 import { changeTheme } from '@common/actions/theme.action';
 import IntroSection from './sections/IntroSection.component';
 import { IStoreState } from '../store/store.model';
+import AboutSection from './sections/AboutSection.component';
 
 const mapStateToProps = (state: IStoreState) => ({
   theme: state.theme,
@@ -30,9 +31,7 @@ const Home = (props: OwnProps): JSX.Element => {
   return (
     <div className={`theme-${theme}`}>
       <IntroSection />
-      <MainSection>
-        <h1>Hi, I&apos;m José Quevedo</h1>
-      </MainSection>
+      <AboutSection />
       <MainSection>
         <h1>Hi, I&apos;m José Quevedo</h1>
       </MainSection>

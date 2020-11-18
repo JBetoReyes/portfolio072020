@@ -77,7 +77,7 @@ const IntroSection = (props: OwnProps): JSX.Element => {
                 <div className="left-wrapper__about-wrapper--corner" />
                 <h3>What I Do?</h3>
                 <p className="left-wrapper__about-content">
-                  I&apos;m a fullstack developer specialized in{' '}
+                  I&apos;m a multidisciplinary developer specialized in{' '}
                   <strong>NodeJS</strong>, <strong>Angular</strong> and{' '}
                   <strong>ReactJS</strong>
                 </p>
