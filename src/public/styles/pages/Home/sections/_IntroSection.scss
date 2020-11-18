@@ -36,7 +36,10 @@ $about-background: #f0ead6;
           overflow: hidden;
           @include size(200);
           &--img {
+            border-radius: 50%;
+            background-color: white;
             height: 100%;
+            overflow: hidden;
           }
         }
 
@@ -53,7 +56,9 @@ $about-background: #f0ead6;
             border: 2px solid;
             margin: 0 10px 0 0;
             &:hover {
+              border-width: 3px;
               cursor: pointer;
+              transform: scale(1.5, 1.5);
             }
             &:nth-child(2) {
               background-color: #192734;
@@ -61,6 +66,9 @@ $about-background: #f0ead6;
             @include themify($themes) {
               border-color: themed('primary-text-color');
             }
+          }
+          &-dot-light-mode {
+            background-color: white;
           }
         }
       }
