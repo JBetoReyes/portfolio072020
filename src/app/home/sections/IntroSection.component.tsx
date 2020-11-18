@@ -4,7 +4,7 @@
 import React from 'react';
 import { MainSection } from '@common/MainSection.component';
 import { WindowHeader } from '@common/WindowHeader.component';
-import profile from '@assets/profile.png';
+import profile from '@assets/profile-default.png';
 import { IStoreState } from '@src/app/store/store.model';
 import { changeTheme } from '@common/actions/theme.action';
 import '@styles/pages/Home/sections/_IntroSection.scss';
@@ -27,6 +27,7 @@ const IntroSection = (props: OwnProps): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     return (e: AppClickEvent) => {
       dispChangeTheme(theme);
+      localStorage.setItem('theme', theme);
     };
   };
   return (
@@ -55,7 +56,7 @@ const IntroSection = (props: OwnProps): JSX.Element => {
               <h4 className="right-wrapper__theme-title">Personalize theme</h4>
               <div className="right-wrapper__theme-dots">
                 <div
-                  className="right-wrapper__theme-dot"
+                  className="right-wrapper__theme-dot right-wrapper__theme-dot-light-mode"
                   onClick={handleChangeTheme('default')}
                   role="menuitem"
                 />
