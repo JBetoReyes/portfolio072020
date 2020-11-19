@@ -15,7 +15,7 @@ export default (): JSX.Element => {
           </p>
           <p>
             When I’m not <s>in the office</s> working remotely I can be found
-            eating tacos, reading sci-fi, eating more tacos, learning new
+            eating tacos, reading sci-fi, playing video games, learning new
             skills, and occasionally, writing about some of that here.
           </p>
           <h4>TOP EXPERTISE</h4>
