@@ -9,9 +9,9 @@ export default (): JSX.Element => {
         <div className="about-me">
           <h4>More about me</h4>
           <p>
-            Hi, I’m José. I’m 27 years old, multi-disciplinary latin american,
-            MX. I’m mostly using React and Node to build websites and web-based
-            applications for different kind of clients.
+            Hi, I’m José. I’m 27 years old, multi-disciplinary and latin
+            american, MX. I’m mostly using React and Node to build websites and
+            web-based applications for different kind of clients.
           </p>
           <p>
             When I’m not <s>in the office</s> working remotely I can be found
