@@ -1,0 +1,13 @@
+@import '../../../themes/Index';
+
+#skills {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  @include themify($themes) {
+    background-color: themed('preview-shadow');
+  }
+  ul {
+    width: 50%;
+  }
+}

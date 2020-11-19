@@ -7,9 +7,9 @@ import { WindowHeader } from '@common/WindowHeader.component';
 import profile from '@assets/profile-default.png';
 import { IStoreState } from '@src/app/store/store.model';
 import { changeTheme } from '@common/actions/theme.action';
-import '@styles/pages/Home/sections/_IntroSection.scss';
 import { connect } from 'react-redux';
 import { AppClickEvent } from '@src/typings/htmlEvents';
+import '@styles/pages/Home/sections/_IntroSection.scss';
 
 const mapDispatchToState = {
   changeTheme,
