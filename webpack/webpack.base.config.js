@@ -24,6 +24,7 @@ module.exports = (env) => {
     plugins: [
       new HtmlPlugin({
         template: resolve(rootPath, 'src', 'public', 'index.html'),
+        favicon: resolve(rootPath, 'src', 'public', 'assets', 'profile-default.png'),
         filename: 'index.html',
       }),
       new CleanWebpackPlugin({

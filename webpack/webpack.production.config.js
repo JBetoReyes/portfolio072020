@@ -10,10 +10,6 @@ const rootPath = resolve(__dirname, '..');
 module.exports = (env) => ({
   ...merge(baseConfig(env), {
     plugins: [
-      new HtmlPlugin({
-        template: resolve(rootPath, 'src', 'public', 'index.html'),
-        filename: 'index.html',
-      }),
       new MiniCssExtractPlugin()
     ],
     mode: 'production',
