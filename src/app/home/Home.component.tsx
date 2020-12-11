@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { MainSection } from '@common/MainSection.component';
 import { changeTheme } from '@common/actions/theme.action';
 import IntroSection from './sections/IntroSection.component';
 import { IStoreState } from '../store/store.model';
 import AboutSection from './sections/AboutSection.component';
+import ProjectsSection from './sections/ProjectsSection.component';
 
 const mapStateToProps = (state: IStoreState) => ({
   theme: state.theme,
@@ -32,9 +32,7 @@ const Home = (props: OwnProps): JSX.Element => {
     <div className={`theme-${theme}`}>
       <IntroSection />
       <AboutSection />
-      <MainSection>
-        <h1>Hi, I&apos;m José Quevedo</h1>
-      </MainSection>
+      <ProjectsSection />
     </div>
   );
 };

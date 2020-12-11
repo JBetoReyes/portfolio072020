@@ -39,9 +39,9 @@ const IntroSection = (props: OwnProps): JSX.Element => {
         <div className="content-wrapper">
           <WindowHeader
             menus={[
-              {
-                label: 'Contact',
-              },
+              // {
+              //   label: 'Contact',
+              // },
             ]}
           />
           <div className="right-wrapper">

@@ -7,7 +7,7 @@ export default (): JSX.Element => {
     <MainSection>
       <div className="about-wrapper">
         <div className="about-me">
-          <h4>More about me</h4>
+          <h4>MORE ABOUT ME</h4>
           <p>
             Hi, I’m José. I’m 27 years old, multi-disciplinary and latin
             american, MX. I’m mostly using React and Node to build websites and
@@ -36,6 +36,11 @@ export default (): JSX.Element => {
               <li>EC2</li>
             </ul>
           </div>
+        </div>
+        <div className="social-links">
+          <h4>FIND ME ON LINKEDIN AND TWITTER</h4>
+          <a href="https://www.linkedin.com/in/josealbertoquevedo/">Linkedin</a><br/>
+          <a href="https://twitter.com/Jose83550863">Twitter</a><br/>
         </div>
       </div>
     </MainSection>
