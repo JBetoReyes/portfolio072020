@@ -44,10 +44,10 @@
     // "moduleResolution": "node",            /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
     "baseUrl": "./",                          /* Base directory to resolve non-absolute module names. */
     "paths": {
-      "@styles/*": ["src/public/styles"],
-      "@src/*": ["src/*"],
-      "@common/*": ["src/app/common/*"],
-      "@assets/*": ["src/public/assets/*"],
+      "@styles/*": ["src/frontend/public/styles"],
+      "@src/*": ["src/frontend/*"],
+      "@common/*": ["src/frontend/app/common/*"],
+      "@assets/*": ["src/frontend/public/assets/*"],
     },
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */
