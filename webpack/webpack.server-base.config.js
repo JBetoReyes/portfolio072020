@@ -6,6 +6,7 @@ const config = (env) => {
     output: {
       path: resolve(__dirname, '..', 'src', 'server', 'public'),
       filename: join('assets', 'app-[hash].js'),
+      publicPath: '/',
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx'],

@@ -1,19 +1,23 @@
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+import { resolve } from 'path';
 
 const { ENV: env, PORT: port } = process.env;
 
 const webpackMiddlewareProvider = async (app) => {
-  const webpackConfig = await import(
-    '../../webpack/webpack.server-development.config'
+  const webpackConfig = require('../../../webpack/webpack.server-development.config')(
+    'development'
   );
+  const {
+    output: { publicPath },
+  } = webpackConfig;
   const compiler = webpack(webpackConfig);
   const webpackServerConfig = {
-    port,
-    hot: true,
+    publicPath,
+    serverSideRender: true,
   };
-  app.use(webpackDevMiddleware(compiler, webpackConfig));
+  app.use(webpackDevMiddleware(compiler, webpackServerConfig));
   app.use(webpackHotMiddleware(compiler));
 };
 

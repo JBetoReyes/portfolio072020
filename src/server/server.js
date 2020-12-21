@@ -6,12 +6,10 @@ import getHtmlIndex from './utils/getHtmlIndex';
 
 (async () => {
   dotenv.config();
-
   const { ENV: env, PORT: port } = process.env;
 
   const app = express();
-  const htmlSkeleton = await getHtmlIndex();
-  console.log(htmlSkeleton);
+  const htmlSkeleton = await getHtmlIndex(env);
   if (env === 'development') {
     webpackMiddlewareProvider(app);
   } else {
@@ -19,7 +17,6 @@ import getHtmlIndex from './utils/getHtmlIndex';
   }
 
   app.get('*', (req, res) => {
-    console.log('Hello World');
     res.send(htmlSkeleton);
   });
 
