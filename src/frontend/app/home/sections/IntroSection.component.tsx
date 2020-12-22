@@ -27,7 +27,9 @@ const IntroSection = (props: OwnProps): JSX.Element => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     return (e: AppClickEvent) => {
       dispChangeTheme(theme);
-      localStorage.setItem('theme', theme);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('theme', theme);
+      }
     };
   };
   return (

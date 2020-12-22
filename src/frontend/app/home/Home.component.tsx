@@ -24,7 +24,10 @@ type Props = MapToStateProps & MapDispToState;
 
 const Home = (props: OwnProps): JSX.Element => {
   const { theme, changeTheme: dispChangeTheme } = props as Props;
-  const storedTheme = localStorage.getItem('theme');
+  let storedTheme = 'dark';
+  if (typeof window !== 'undefined') {
+    storedTheme = localStorage.getItem('theme') as string;
+  }
   if (storedTheme) {
     dispChangeTheme(storedTheme);
   }
