@@ -15,13 +15,13 @@ const { ENV: env, PORT: port } = process.env;
   const app = express();
   const htmlSkeleton = await getHtmlIndex(env as string);
   app.get('*', (req, res) => {
-    res.send(
-      renderToString(
-        <Provider store={store}>
-          <Home />
-        </Provider>
-      )
+    const reactApp = renderToString(
+      <Provider store={store}>
+        <Home />
+      </Provider>
     );
+    const html = htmlSkeleton.replace('\${html}', reactApp);
+    res.send(html);
   });
   app.listen(port, () => {
     console.log(`App running on port: ${port}`);
